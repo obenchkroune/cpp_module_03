@@ -1,11 +1,12 @@
-#ifndef CLAPTRAP_H
-#define CLAPTRAP_H
+#ifndef CLAP_TRAP_H
+#define CLAP_TRAP_H
 
 #include <string>
 
 class ClapTrap 
 {
 public:
+	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &other);
 	ClapTrap &operator=(const ClapTrap &other);

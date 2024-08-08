@@ -1,6 +1,14 @@
 #include "ScavTrap.h"
 #include <iostream>
 
+ScavTrap::ScavTrap()
+{
+	std::cout << "[ScavTrap] Param Constructor Called" << std::endl;
+	m_hp = 100;
+	m_energy = 50;
+	m_attack_dammage = 20;
+}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "[ScavTrap] Param Constructor Called" << std::endl;
@@ -9,9 +17,10 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	m_attack_dammage = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap &other)
 {
 	std::cout << "[ScavTrap] Copy Constructor Called" << std::endl;
+	*this = other;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)

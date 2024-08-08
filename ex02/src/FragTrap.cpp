@@ -1,6 +1,14 @@
 #include "FragTrap.h"
 #include <iostream>
 
+FragTrap::FragTrap()
+{
+	std::cout << "[FragTrap] Default Constructor Called!" << std::endl;
+	m_hp = 100;
+	m_energy = 100;
+	m_attack_dammage = 30;
+}
+
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "[FragTrap] Param Constructor Called!" << std::endl;

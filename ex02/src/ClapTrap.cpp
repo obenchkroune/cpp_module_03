@@ -1,6 +1,15 @@
 #include "ClapTrap.h"
 #include <iostream>
 
+ClapTrap::ClapTrap()
+{
+	std::cout << "[ClapTrap] Default Constructor Called" << std::endl;
+	m_name = "Unnamed";
+	m_hp = 10;
+	m_energy = 10;
+	m_attack_dammage = 0;
+}
+
 ClapTrap::ClapTrap(std::string name)
 {
 	std::cout << "[ClapTrap] Param Constructor Called" << std::endl;

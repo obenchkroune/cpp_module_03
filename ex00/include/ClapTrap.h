@@ -1,20 +1,21 @@
-#ifndef CLAPTRAP_H
-#define CLAPTRAP_H
+#ifndef CLAP_TRAP_H
+#define CLAP_TRAP_H
 
 #include <string>
 
 class ClapTrap 
 {
 public:
+	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &other);
 	ClapTrap &operator=(const ClapTrap &other);
-	~ClapTrap();
-	void attack(const std::string &target);
+	virtual ~ClapTrap();
+	virtual void attack(const std::string &target);
 	void takeDammage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
-private:
+protected:
 	std::string		m_name;
 	unsigned int	m_hp;
 	unsigned int	m_energy;
