@@ -19,7 +19,13 @@ ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-	(void)other;
+	if (this != &other)
+	{
+		m_name = other.m_name;
+		m_hp = other.m_hp;
+		m_energy = other.m_energy;
+		m_attack_dammage = other.m_attack_dammage;
+	}
 	return *this;
 }
 
@@ -33,4 +39,14 @@ void ScavTrap::guardGate()
 	if (!this->hasResources())
 		return ;
 	cout << "ScavTrap " << m_name << " is in gate keeper mode!" << endl;
+}
+
+void ScavTrap::attack(const string &target)
+{
+	if (!this->hasResources())
+		return ;
+	m_energy--;
+	cout
+		<< "ScavTrap " << m_name << " attacks " << target
+		<< ", causing " << m_attack_dammage << " points of damage!" << endl;
 }

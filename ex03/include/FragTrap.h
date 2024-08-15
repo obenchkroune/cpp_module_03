@@ -14,8 +14,10 @@ public:
 	FragTrap(string name);
 	FragTrap(const FragTrap &other);
 	FragTrap &operator=(const FragTrap &other);
-	~FragTrap();
-	void	highFivesGuys(void);
+	virtual ~FragTrap();
+
+	void			highFivesGuys(void);
+	virtual void	attack(const string &target);
 
 private:
 	

@@ -9,11 +9,12 @@ class ClapTrap
 public:
 	ClapTrap(string name);
 	ClapTrap(const ClapTrap &other);
-	ClapTrap &operator=(const ClapTrap &other);
-	~ClapTrap();
-	void	attack(const string& target);
-	void	takeDammage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+	virtual ~ClapTrap();
+
+	ClapTrap		&operator=(const ClapTrap &other);
+	virtual void	attack(const string& target);
+	void			takeDammage(unsigned int amount);
+	void			beRepaired(unsigned int amount);
 
 protected:
 	string			m_name;
