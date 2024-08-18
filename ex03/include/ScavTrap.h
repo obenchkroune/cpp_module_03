@@ -5,7 +5,7 @@
 
 using std::string;
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 public:
 	static const int m_default_hp = 100;

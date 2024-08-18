@@ -1,7 +1,7 @@
 NAME            =   ex03
 
 CXX             =   c++
-CXXFLAGS        =   -Wall -Werror -Wextra -std=c++98 -Iinclude -MMD -MP
+CXXFLAGS        =   -Wall -Werror -Wextra -std=c++98 -Iinclude -MMD -MP -fsanitize=address -g3
 
 BUILD_DIR       =   build
 SRC_DIR         =   src

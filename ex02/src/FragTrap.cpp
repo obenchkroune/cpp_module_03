@@ -6,9 +6,9 @@ using std::endl;
 FragTrap::FragTrap(string name) : ClapTrap(name)
 {
 	cout << "[FragTrap] Param Constructor Called!" << endl;
-	m_hp = m_default_hp;
-	m_attack_dammage = m_default_attack_dammage;
-	m_energy = m_default_energy;
+	m_hp = 100;
+	m_attack_dammage = 30;
+	m_energy = 100;
 }
 
 

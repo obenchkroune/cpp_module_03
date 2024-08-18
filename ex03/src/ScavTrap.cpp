@@ -9,7 +9,7 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name)
 	cout << "[ScavTrap] Param Constructor Called!" << endl;
 	m_hp = m_default_hp;
 	m_attack_dammage = m_default_attack_dammage;
-	m_energy = m_energy;
+	m_energy = m_default_energy;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
@@ -39,4 +39,14 @@ void ScavTrap::guardGate()
 	if (!this->hasResources())
 		return ;
 	cout << "ScavTrap " << m_name << " is in gate keeper mode!" << endl;
+}
+
+void ScavTrap::attack(const string &target)
+{
+	if (!this->hasResources())
+		return ;
+	m_energy--;
+	cout
+		<< "ScavTrap " << m_name << " attacks " << target
+		<< ", causing " << m_attack_dammage << " points of damage!" << endl;
 }

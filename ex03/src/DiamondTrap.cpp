@@ -40,12 +40,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 
 void DiamondTrap::attack(const string &target)
 {
-	if (!this->hasResources())
-		return ;
-	m_energy--;
-	cout
-		<< "DiamondTrap " << m_name << " attacks " << target
-		<< ", causing " << m_attack_dammage << " points of damage!" << endl;
+	ScavTrap::attack(target);
 }
 
 void DiamondTrap::whoAmI()
